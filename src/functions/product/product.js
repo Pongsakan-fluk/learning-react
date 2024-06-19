@@ -13,6 +13,10 @@ export const createProduct = async(value) => {
     return await axios.post(`https://fakestoreapi.com/products`, value)
 }
 
-export const updateProduct = async(value) => {
-    return await axios.put(`https://fakestoreapi.com/products`, value)
+export const updateProduct = async(id, value) => {
+    return await axios.put(`https://fakestoreapi.com/products/${id}`, value)
+}
+
+export const deleteProduct = async(id) => {
+    return axios.delete(`https://fakestoreapi.com/products/${id}`)
 }
